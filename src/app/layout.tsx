@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "better-chatbot",
+  title: "ObsidianChat",
   description:
-    "Better Chatbot is a chatbot that uses the Tools to answer questions.",
+    "ObsidianChat is an AI-powered chatbot that uses tools to answer questions.",
 };
 
 export default async function RootLayout({

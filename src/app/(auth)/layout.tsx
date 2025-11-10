@@ -1,7 +1,7 @@
-import { Think } from "ui/think";
 import { getTranslations } from "next-intl/server";
 import { FlipWords } from "ui/flip-words";
 import { BackgroundPaths } from "ui/background-paths";
+import Image from "next/image";
 
 export default async function AuthLayout({
   children,
@@ -15,11 +15,16 @@ export default async function AuthLayout({
             <div className="absolute inset-0 w-full h-full">
               <BackgroundPaths />
             </div>
-            <h1 className="text-xl font-semibold flex items-center gap-3 animate-in fade-in duration-1000">
-              <Think />
-
-              <span>Chat Bot</span>
-            </h1>
+            <div className="flex items-center animate-in fade-in duration-1000">
+              <Image
+                src="/obsidian-chat.png"
+                alt="ObsidianChat"
+                width={480}
+                height={160}
+                className="h-auto w-full max-w-md object-contain"
+                priority
+              />
+            </div>
             <div className="flex-1" />
             <FlipWords
               words={[t("description")]}

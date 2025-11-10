@@ -11,6 +11,7 @@ import { SidebarHeaderShared } from "./sidebar-header";
 import { isShortcutEvent, Shortcuts } from "lib/keyboard-shortcuts";
 import { AppSidebarUser } from "./app-sidebar-user";
 import { BasicUser } from "app-types/user";
+import { uiCopy } from "@/lib/uiCopy";
 
 export function AppSidebar({
   user,
@@ -39,7 +40,7 @@ export function AppSidebar({
       className="border-r border-sidebar-border/80"
     >
       <SidebarHeaderShared
-        title="better-chatbot"
+        title={uiCopy.brand}
         href="/"
         enableShortcuts={true}
         onLinkClick={() => {
